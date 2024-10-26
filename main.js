@@ -9,7 +9,11 @@ var currentSize = 100 // מתחילים עם גובה התחלתי של 100px
 
 function onBallClick() {
     var ball = document.querySelector('.ball')
-    currentSize += 50
+
+     // יצירת מספר אקראי בין 20 ל-60
+     var increment = Math.floor(Math.random() * (60 - 20 + 1)) + 20
+     currentSize += increment
+    //  console.log('increment', increment)
 
     if (currentSize > 400) {
         currentSize = 100 // reset to 100px
