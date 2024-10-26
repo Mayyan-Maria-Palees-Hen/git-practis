@@ -8,7 +8,7 @@ document.querySelector('.ball2').textContent = '100'
 var currentSize1 = 100 // גובה התחלתי של הכדור הראשון
 var currentSize2 = 100 // גובה התחלתי של הכדור השני
 
-function onBallClick(ball) {
+function onBallClick(ball, maxDiameter) {
     // יצירת מספר אקראי בין 20 ל-60
     var increment = Math.floor(Math.random() * (60 - 20 + 1)) + 20
 
@@ -17,21 +17,21 @@ function onBallClick(ball) {
         currentSize1 += increment
 
         // מגבלה על גודל הכדור
-        if (currentSize1 > 400) {
+        if (currentSize1 > maxDiameter) {
             currentSize1 = 100 // reset to 100px
         }
 
         // עדכון רוחב וגובה הכדור
         ball.style.width = currentSize1 + 'px'
         ball.style.height = currentSize1 + 'px'
-        ball.textContent = currentSize1; // עדכון הטקסט
+        ball.textContent = currentSize1 // עדכון הטקסט
 
     } else if (ball.classList.contains('ball2')) {
-        currentSize2 += increment;
+        currentSize2 += increment
 
         // מגבלה על גודל הכדור
-        if (currentSize2 > 400) {
-            currentSize2 = 100; // reset to 100px
+        if (currentSize2 > maxDiameter) {
+            currentSize2 = 100 // reset to 100px
         }
 
         // עדכון רוחב וגובה הכדור
