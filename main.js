@@ -1,18 +1,22 @@
 'use strict'
 
-document.querySelector('.ball').onclick = onBallClick;
+document.querySelector('.ball').onclick = onBallClick
 
 // הצגת הקוטר הראשוני של הכדור
 document.querySelector('.ball').textContent = '100'
 
+var currentSize = 100 // מתחילים עם גובה התחלתי של 100px
+
 function onBallClick() {
     var ball = document.querySelector('.ball')
-    
-    // קבלת רוחב הכדור הנוכחי בעזרת getComputedStyle
-    var currentSize = parseInt(getComputedStyle(ball).width)
-    
-    var newSize = currentSize + 50
-    ball.style.width = newSize + 'px'
-    ball.style.height = newSize + 'px'
-    ball.textContent = newSize // עדכון הטקסט
+    currentSize += 50
+
+    if (currentSize > 400) {
+        currentSize = 100 // reset to 100px
+        console.log('Resetting size to:', currentSize)
+    }
+
+    ball.style.width = currentSize+ 'px'
+    ball.style.height = currentSize + 'px'
+    ball.textContent = currentSize // עדכון הטקסט
 }
