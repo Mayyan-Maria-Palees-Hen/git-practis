@@ -2,22 +2,29 @@
     box-sizing: border-box;
 }
 
-body{
+body {
     background-color: black;
     color: white;
     text-align: center;
 }
 
-.ball{
+.ball, .ball2 {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100px;
     height: 100px;
-    margin: 0 auto;
+    margin: 5px auto;
     border-radius: 50%;
     font-size: 22px;
     font-weight: bold;
-    background-color: royalblue;
     transition: width 1s, height 1s;
+}
+
+.ball {
+    background-color: royalblue;
+}
+
+.ball2 {
+    background-color: rgb(96, 231, 96);
 }
