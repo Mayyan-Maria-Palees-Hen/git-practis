@@ -8,14 +8,17 @@ body {
     text-align: center;
 }
 
-.ball, .ball2 {
+.ball, .ball2, .ball3 {
     display: flex;
     align-items: center;
     justify-content: center;
+
     width: 100px;
     height: 100px;
     margin: 5px auto;
     border-radius: 50%;
+    cursor: pointer;
+
     font-size: 22px;
     font-weight: bold;
     transition: width 1s, height 1s;
@@ -27,4 +30,8 @@ body {
 
 .ball2 {
     background-color: rgb(96, 231, 96);
+}
+
+.ball3{
+    background-color: red;
 }

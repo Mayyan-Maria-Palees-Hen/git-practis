@@ -43,3 +43,28 @@ function onBallClick(ball, maxDiameter) {
     // שינוי צבע הכדור לצבע אקראי
     ball.style.backgroundColor = getRandomColor()
 }
+
+
+function swapBalls() {
+    var ball1 = document.querySelector('.ball')
+    var ball2 = document.querySelector('.ball2')
+
+    // חילוף צבעים
+    var tempColor = ball1.style.backgroundColor
+    ball1.style.backgroundColor = ball2.style.backgroundColor
+    ball2.style.backgroundColor = tempColor
+
+    // חילוף גדלים
+    var tempSize = ball1.style.width // רוחב הכדור הראשון
+    ball1.style.width = ball2.style.width // רוחב הכדור השני
+    ball2.style.width = tempSize // עדכון רוחב הכדור הראשון
+
+    // עדכון גובה הכדורים באותו אופן
+    tempSize = ball1.style.height // גובה הכדור הראשון
+    ball1.style.height = ball2.style.height // גובה הכדור השני
+    ball2.style.height = tempSize // עדכון גובה הכדור הראשון
+
+    // עדכון טקסט הכדורים
+    ball1.textContent = parseInt(ball1.style.width) // עדכון לפי רוחב חדש,הפרסאינט ממיר את הPX למספר
+    ball2.textContent = parseInt(ball2.style.width) // עדכון לפי רוחב חדש
+}
