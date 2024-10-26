@@ -23,4 +23,8 @@ function onBallClick() {
     ball.style.width = currentSize+ 'px'
     ball.style.height = currentSize + 'px'
     ball.textContent = currentSize // עדכון הטקסט
+
+
+    // שינוי צבע הכדור לצבע אקראי
+    ball.style.backgroundColor = getRandomColor()
 }
