@@ -19,4 +19,5 @@ body{
     font-size: 22px;
     font-weight: bold;
     background-color: royalblue;
+    transition: width 1s, height 1s;
 }
